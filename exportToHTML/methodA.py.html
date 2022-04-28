@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>methodA.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6897bb;}
+.s2 { color: #808080;}
+.s3 { color: #cc7832;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+methodA.py</font>
+</center></td></tr></table>
+<pre><span class="s0">pay_per_hour = </span><span class="s1">15</span>
+<span class="s0">hours_worked_in_week = </span><span class="s1">40</span>
+
+
+<span class="s2"># if hours_worked_in_week &lt;= 0:</span>
+<span class="s2">#     print ( &quot;Error, negative hours&quot; )</span>
+<span class="s2"># elif hours_worked_in_week &gt; 84:</span>
+<span class="s2">#     print ( &quot;Error, Impossible hours&quot;)</span>
+
+<span class="s3">if </span><span class="s0">hours_worked_in_week &lt;= </span><span class="s1">0</span><span class="s0">:</span>
+    <span class="s0">print ( </span><span class="s4">&quot;Error, negative hours&quot; </span><span class="s0">)</span>
+<span class="s3">elif </span><span class="s0">hours_worked_in_week &gt; </span><span class="s1">84</span><span class="s0">:</span>
+    <span class="s0">print ( </span><span class="s4">&quot;Error, Impossible hours&quot;</span><span class="s0">)</span>
+<span class="s3">elif </span><span class="s0">hours_worked_in_week &lt;= </span><span class="s1">40</span><span class="s0">:</span>
+    <span class="s0">regular_pay = pay_per_hour * hours_worked_in_week</span>
+    <span class="s0">round ( regular_pay</span><span class="s3">, </span><span class="s1">2</span><span class="s0">)</span>
+    <span class="s0">print ( </span><span class="s4">&quot;$&quot; </span><span class="s0">+ str(regular_pay))</span>
+<span class="s3">elif </span><span class="s0">hours_worked_in_week &gt; </span><span class="s1">40</span><span class="s0">:</span>
+    <span class="s0">overtime_pay = ( pay_per_hour * </span><span class="s1">1.5</span><span class="s0">) * hours_worked_in_week</span>
+    <span class="s0">round ( overtime_pay</span><span class="s3">, </span><span class="s1">2</span><span class="s0">)</span>
+    <span class="s0">print ( </span><span class="s4">&quot;$&quot; </span><span class="s0">+ str(overtime_pay))</span>
+
+
+<span class="s2"># elif hours_worked_in_week &lt;= 0:</span>
+<span class="s2">#     print ( &quot;Error, negative hours&quot; )</span>
+<span class="s2"># elif hours_worked_in_week &gt; 84:</span>
+<span class="s2">#     print ( &quot;Error, Impossible hours&quot;)</span>
+</pre>
+</body>
+</html>
