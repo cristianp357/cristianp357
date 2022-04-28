@@ -29,8 +29,9 @@ outfile = open ('web-file.txt', 'w', encoding='utf-8')
 search_terms = ['cat', 'london', 'horse'] #1b: step 1
 
 for words in search_terms:
+    
     for line in lines:
-        if detect_word(line, 'web'):
+        if detect_word(line, search_terms):
             print ('True')
             print (line)
             word_count = word_count + 1
