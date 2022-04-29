@@ -24,36 +24,24 @@ lines = infile.readlines()
 infile.close()
 
 word_count = 0
-outfile = open ('web-file.txt', 'w', encoding='utf-8')
+
 
 search_terms = ['cat', 'london', 'horse'] #1b: step 1
 
-for words in search_terms:
-    
+count_dict = {}
+
+for word in search_terms:
+    outfile = open (  word + '-file.txt', 'w', encoding='utf-8')
+    word_count = 0
     for line in lines:
-        if detect_word(line, search_terms):
+        if detect_word(line, word):
             print ('True')
             print (line)
             word_count = word_count + 1
+            count_dict[line] = count_dict[line] + 1
             outfile.write(line + '\n')
-print(word_count)
-outfile.close()
+    outfile.close()
+    print(word_count)
+print (count_dict)
 
 
-# for line in lines:
-#     if detect_word(line, 'web'):
-#         print ('True')
-#         print (line)
-#         word_count = word_count + 1
-#         outfile.write(line + '\n')
-# print(word_count)
-# outfile.close()
-# #
-# # for line in lines:
-# #     if detect_word(line, 'web'):
-# #         print ('True')
-# #         print (line)
-# #         word_count = word_count + 1
-# #         outfile.write(line + '\n')
-# # print(word_count)
-# # outfile.close()
