@@ -28,20 +28,22 @@ word_count = 0
 
 search_terms = ['cat', 'london', 'horse'] #1b: step 1
 
-count_dict = {}
+count_dict = {'cat': 0, 'london': 0, 'horse': 0}
 
 for word in search_terms:
     outfile = open (  word + '-file.txt', 'w', encoding='utf-8')
     word_count = 0
+    count_dict = {}
     for line in lines:
         if detect_word(line, word):
             print ('True')
             print (line)
             word_count = word_count + 1
-            count_dict[line] = count_dict[line] + 1
+            count_dict[word] = count_dict[word] + 1
             outfile.write(line + '\n')
     outfile.close()
     print(word_count)
-print (count_dict)
+
+print (word, count_dict[word])
 
 
