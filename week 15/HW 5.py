@@ -19,7 +19,7 @@ def detect_word (source_string, word_detect):
     return result
 
 
-search_terms = ['cat', 'london', 'horse']
+search_terms = ['cat', 'scream', 'write']
 
 count_dict = {}
 
@@ -37,23 +37,18 @@ infile = open (fname, 'r', encoding='utf-8') #step 1a
 lines = infile.readlines()
 infile.close()
 
-
-
-# for word in search_terms:
-#     word_count = 0
-#     for line in lines:
-#         if detect_word(line, word):
-
 for line in lines:
-    for word in search_terms:
-        if detect_word(word, line):
-            print ('True')
-            print (line)
-            print(word, "count is", count_dict[word]['count'])
-            count_dict[word]['count'] += 1
-            count_dict[word]['count'] = count_dict[word]['lines']
-            count_dict[term]['lines'].append(line)
-            print(count_dict[word]['count'], len(count_dict[word]['lines']))
+    for term in search_terms:
+        if detect_word(line, term):
+            count_dict[term]['count'] += 1
+            print(term, "count is", count_dict[term]['count']) #increment counter for term
+            #count_dict[term]['count'] += 1
+
+            count_dict[term]['count'] = count_dict[term]['count'] + 1 #increment the counter
+            print (term, "lines are", count_dict[term]['lines'])
+
+            count_dict[term]['lines'].append(line) #incrementing the list of lines
+            print(count_dict[term]['count'], len(count_dict[term]['lines']))
 
 
 print (count_dict)
@@ -61,3 +56,13 @@ print (count_dict)
 fileout = open('term-results.json', 'w', encoding='utf-8')
 json.dump(count_dict, fileout, indent = 4)
 fileout.close()
+
+infile = open('term-results.json', 'r', encoding='utf-8')
+data = json.load(infile)
+
+
+for look_up in data:
+    if detect_word(look_up, "upon "):
+        print (look_up)
+
+infile.close()

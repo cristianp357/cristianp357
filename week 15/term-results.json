@@ -2,15 +2,26 @@
     "file_name": "Three-years-in-europe (5).txt",
     "num_terms": 3,
     "cat": {
-        "count": 0,
-        "lines": []
+        "count": 6,
+        "lines": [
+            "worthless paper. These were known as the \"Wild Cat Banks.\" Silver coin\n",
+            "Wild Cat money that I had on hand, but which was a lawful tender. The\n",
+            "whose walls I was then standing, and the Wild Cat Banks of America!\n"
+        ]
     },
-    "london": {
-        "count": 0,
-        "lines": []
+    "scream": {
+        "count": 2,
+        "lines": [
+            "more closely. While looking at her, the lady gave a scream and appeared\n"
+        ]
     },
-    "horse": {
-        "count": 0,
-        "lines": []
+    "write": {
+        "count": 8,
+        "lines": [
+            "That a boy under twelve years of age should write a series of poems,\n",
+            "When you get tired of walking, you can sit down and write your\n",
+            "There are some men who neither speak nor write, but whose lives place\n",
+            "speak, write, and publish upon any subject, and more especially upon\n"
+        ]
     }
 }
