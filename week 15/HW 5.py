@@ -57,12 +57,17 @@ fileout = open('term-results.json', 'w', encoding='utf-8')
 json.dump(count_dict, fileout, indent = 4)
 fileout.close()
 
-infile = open('term-results.json', 'r', encoding='utf-8')
+infile = open('term-results.json', 'r', encoding= 'utf-8')
 data = json.load(infile)
-
-
-for look_up in data:
-    if detect_word(look_up, "upon "):
-        print (look_up)
-
 infile.close()
+
+print(data ['num_terms']*['count'])
+print(data ['scream']['lines'])
+print(data['file_name'])
+
+
+# for look_up in data:
+#     if detect_word(look_up, "upon "):
+#         print (look_up)
+#
+
